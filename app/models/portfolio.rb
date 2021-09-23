@@ -1,4 +1,8 @@
 class Portfolio < ApplicationRecord
+
+  # Concerns used only for data change. Created Placeholder file in concerns folder and included in Portfolio and skill model
+  include Placeholder
+
   validates_presence_of :title, :sub_title, :body, :main_image, :thumb_image
 
   # without scope method
@@ -13,7 +17,7 @@ class Portfolio < ApplicationRecord
   after_initialize :set_defaults
 
   def set_defaults
-    self.main_image ||= "https://via.placeholder.com/600X400"
-    self.thumb_image ||= "https://via.placeholder.com/350X200"
+    self.main_image ||= Placeholder.image_generator(height: 600, width: 400)
+    self.thumb_image ||= Placeholder.image_generator(height: 350, width: 200)
   end
 end
