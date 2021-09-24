@@ -1,5 +1,8 @@
 class Portfolio < ApplicationRecord
 
+  #technology reference
+  has_many :technologies
+
   # Concerns used only for data change. Created Placeholder file in concerns folder and included in Portfolio and skill model
   include Placeholder
 
