@@ -53,4 +53,4 @@ puts "9 Portfolio created!"
   )
 end
 
-puts "3 technology created!"
+puts "3 technology create!"

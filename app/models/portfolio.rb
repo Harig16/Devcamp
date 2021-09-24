@@ -3,6 +3,10 @@ class Portfolio < ApplicationRecord
   #technology reference
   has_many :technologies
 
+  #nested attributes 
+  accepts_nested_attributes_for :technologies, 
+                                  reject_if: lambda { |attrs| attrs[:name].empty? }
+
   # Concerns used only for data change. Created Placeholder file in concerns folder and included in Portfolio and skill model
   include Placeholder
 
