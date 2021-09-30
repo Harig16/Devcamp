@@ -12,14 +12,14 @@ class PortfoliosController < ApplicationController
   end
 
   def new
-    @portfolio_items = Portfolio.new
-    3.times { @portfolio_items.technologies.build }
+    @portfolio_item = Portfolio.new
+    3.times { @portfolio_item.technologies.build }
   end
 
   def create
-    @portfolio_items = Portfolio.new(portfolio_params)
+    @portfolio_item = Portfolio.new(portfolio_params)
     respond_to do |format|
-      if @portfolio_items.save
+      if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: "Your Portfolio is live." }
       else
         format.html { render :new, status: :unprocessable_entity }
