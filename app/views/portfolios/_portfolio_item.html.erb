@@ -1,5 +1,5 @@
 <h3><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h3>
-<h5><%= portfolio_item.sub_title%></h5>
+<h5><%= portfolio_item.sub_title %></h5>
 <p><%= portfolio_item.body %></p>
 <p><%=  image_tag  portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %></p>
 <%= link_to "Edit", edit_portfolio_path(portfolio_item) if logged_in?(:site_admin) %>
