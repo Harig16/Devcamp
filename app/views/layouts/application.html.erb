@@ -1,21 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html ang="en" class="h-100">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+        <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render 'shared/nav', location: "top" %>
-    <%= login_helper %>
-    <%= yield %>
-    <%= source_helper  "application" %>
-    <%= copyright_generator %>  
+  <body class="d-flex h-100 text-center text-white bg-dark">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <!--p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p-->
+      <header class="mb-auto">
+        <%= render 'shared/application_nav' %>
+      </header>
+      <%= login_helper %>
+      <%= yield %>
+      <%= source_helper  "application" %>
+      <%= copyright_generator %> 
+    </div> 
   </body>
 </html>
