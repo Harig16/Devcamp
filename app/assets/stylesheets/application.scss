@@ -53,3 +53,30 @@ body {
   color: #fff;
   border-bottom-color: #fff;
 }
+
+/*
+ * Custom
+ */
+.card-body {
+  color: black;
+  margin: 10px;
+  text-align: left;
+}
+
+.form-group{
+  border: .2rem solid transparent;
+  margin: 2px;
+  padding: 1px;
+}
+
+.form-control{
+  padding: 1px;
+}
+
+.auth-links a{
+  color: black;
+}
+
+.register-text {
+  text-align: right;
+}
