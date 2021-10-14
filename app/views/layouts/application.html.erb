@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-        <style>
+    <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -31,13 +31,14 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <!--p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p-->
-      <header class="mb-auto">
-        <%= render 'shared/application_nav' %>
-      </header>
-      <%= login_helper %>
+      
+      <%= render 'shared/application_nav' %>
+      
       <%= yield %>
+      
       <%= source_helper  "application" %>
-      <%= copyright_generator %> 
+
+      <%= render 'shared/application_footer' %>
     </div> 
   </body>
 </html>
