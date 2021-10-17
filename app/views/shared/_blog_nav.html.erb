@@ -1,0 +1,10 @@
+<div class="nav-scroller py-1 mb-2">
+  <nav class="nav d-flex justify-content-around">
+    <div><%= link_to "Home", root_path, class: "link-secondary" %></div>
+    <div><%= link_to "About", about_me_path, class: "link-secondary" %></div>
+    <div><%= link_to "Contact", contact_path, class: "link-secondary" %></div>
+    <div><%= link_to "Blog", blogs_path, class: "link-secondary" %></div>
+    <div><%= link_to "Portfolio", portfolios_path, class: "link-secondary" %></div>
+    <%= login_helper "link-secondary" %>
+  </nav>
+</div>
