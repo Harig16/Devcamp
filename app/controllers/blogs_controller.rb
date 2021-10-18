@@ -4,7 +4,9 @@ class BlogsController < ApplicationController
   access all: [:show, :index], user: {except: [:destroy, :new, :edit, :create, :update, :toggle_status]}, site_admin: :all
   # GET /blogs or /blogs.json
   def index
-    @blogs = Blog.special_blogs
+    #@blogs = Blog.special_blogs
+    @blogs = Blog.paginate(page: params[:page], per_page: 5)
+    #debugger
     @page_title = "Blogs"
   end
 

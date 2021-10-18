@@ -34,26 +34,19 @@
     <!-- end of the nav -->
     <main class="container">
       <div class="row g-5">
-        <h2 class="pb-4 mb-4 fst-italic border-bottom">
-          My Blog Post
-        </h2>
-          
+        <section class="border-bottom">
+          <%= render 'shared/blog_header' %>
+        </section>
         <div class="col-md-8">   
           <%= yield %>
         </div>
         <%= render 'shared/blog_sidebar' %>
-        <!-- start of the footer -->
-        <footer class="blog-footer">
-          <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          <p>
-            <a href="#">Back to top</a>
-          </p>
-        </footer>
-        <!-- end of the footer -->
+        
+        <%= render 'shared/blog_footer' %>
 
         <%#= render 'shared/nav', location: "bottom" %>    
         <%= source_helper "blog" %>
-        <%= copyright_generator %>
+        
       </div>
     </main>
   </body>

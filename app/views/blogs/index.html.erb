@@ -1,14 +1,11 @@
-<div class="nav-scroller py-1 mb-2">
-  <nav class="nav d-flex justify-content-between">
-    <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
-  </nav>
-</div>
+<nav class="pagination justify-content-center">
+  <%= will_paginate @blogs, class: "page-link" %>
+</nav>
 
 <article class="blog-post">
- <%= render @blogs %>
+  <%= render @blogs %>
 </article>
 
-<nav class="blog-pagination" aria-label="Pagination">
-  <a class="btn btn-outline-primary" href="#">Older</a>
-  <a class="btn btn-outline-secondary disabled">Newer</a>
+<nav class="pagination justify-content-center">
+  <%= will_paginate @blogs, class: "page-link" %>
 </nav>
