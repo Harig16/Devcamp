@@ -1,7 +1,7 @@
 class Portfolio < ApplicationRecord
 
   #technology reference
-  has_many :technologies
+  has_many :technologies, dependent: :delete_all
 
   #nested attributes 
   accepts_nested_attributes_for :technologies, 
