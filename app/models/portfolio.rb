@@ -1,5 +1,8 @@
 class Portfolio < ApplicationRecord
 
+  # set position automatically
+  acts_as_list
+
   #technology reference
   has_many :technologies, dependent: :delete_all
 
@@ -15,6 +18,10 @@ class Portfolio < ApplicationRecord
   # without scope method
   def self.angular
     where(sub_title: "Angular")
+  end
+
+  def self.by_position
+    order("position ASC")
   end
 
   #custom scope method
