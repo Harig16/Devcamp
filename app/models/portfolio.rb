@@ -12,6 +12,7 @@ class Portfolio < ApplicationRecord
 
   #nested attributes 
   accepts_nested_attributes_for :technologies, 
+                                  allow_destroy: true,
                                   reject_if: lambda { |attrs| attrs[:name].empty? }
 
   # Concerns used only for data change. Created Placeholder file in concerns folder and included in Portfolio and skill model
