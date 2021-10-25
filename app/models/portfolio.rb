@@ -6,6 +6,10 @@ class Portfolio < ApplicationRecord
   #technology reference
   has_many :technologies, dependent: :delete_all
 
+  # image uploaded using carrierwave
+  mount_uploader :main_image, PortfolioUploader
+  mount_uploader :thumb_image, PortfolioUploader
+
   #nested attributes 
   accepts_nested_attributes_for :technologies, 
                                   reject_if: lambda { |attrs| attrs[:name].empty? }

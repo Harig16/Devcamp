@@ -51,6 +51,15 @@ gem 'will_paginate', '~> 3.3'
 ## jquery-ui-rails
 gem 'jquery-ui-rails', '~> 5.0', '>= 5.0.5'
 
+# Upload file in rails application
+gem 'carrierwave', '~> 2.1'
+
+# Manipulate image using mini_magick with minimal resources
+gem 'mini_magick', '~> 4.11'
+
+# Auto load env in rails
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
