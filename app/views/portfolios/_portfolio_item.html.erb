@@ -1,14 +1,7 @@
 <div data-id="<%= portfolio_item.id %>" class="col">
   <div class="card shadow-sm">
-    <!--svg class="bd-placeholder-img card-img-top" width="100%" height="225"    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder:    Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"-->
-      <%= image_tag portfolio_item.thumb_image_url unless portfolio_item.thumb_image.nil? %>
-      <!--title>
-        <%= portfolio_item.title %>
-      </title>
-      <rect width="100%" height="100%" fill="#55595c"/>
-      <text x="50%" y="50%" fill="#eceeef" dy=".3em"><%= portfolio_item.title %></    text>
-    </svg-->
-
+    <%= image_tag portfolio_img(portfolio_item.thumb_image_url, "thumb") %>
+      
     <div class="card-body">
       <p class="card-text"><strong><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></strong> <%= portfolio_item.sub_title %></p>
       <div class="d-flex justify-content-between align-items-center">
