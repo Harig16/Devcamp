@@ -3,7 +3,7 @@
     <div>
       <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved: </h2>
       <% blog.errors.full_messages.each do |message| %>
-        <%= js add_gritter(message, title: "Devcamp portfolio", sticky: false) %>
+        <%= alert_generator message %>
       <% end %>
     </div>
   <% end %>
