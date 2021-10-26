@@ -62,6 +62,8 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 
 # Add nested text field
 gem 'cocoon', '~> 1.2', '>= 1.2.15'
+# Allow you to easily add glow notification
+gem "gritter", "1.2.0"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

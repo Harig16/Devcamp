@@ -1,4 +1,12 @@
 <%= form_for(portfolio_items) do |form| %>
+  <% if portfolio_items.errors.any? %>
+    <div>
+      <h2><%= pluralize(portfolio_items.errors.count, "error") %> prohibited this Portfolio from being saved: </h2>
+      <% portfolio_items.errors.full_messages.each do |message| %>
+        <%= js add_gritter(message, title: "Devcamp portfolio", sticky: false) %>
+      <% end %>
+    </div>
+  <% end %>
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">

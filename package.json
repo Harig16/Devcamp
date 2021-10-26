@@ -9,6 +9,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.3.0",
     "bootstrap": "^5.1.2",
+    "gritter": "^1.7.4",
     "jquery": "^3.6.0",
     "popper.js": "^1.16.1",
     "sortablejs": "^1.14.0",

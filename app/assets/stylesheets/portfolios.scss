@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "jquery-ui";
+@import "gritter";
 
 .portfolio-form-layout {
   padding: 2rem;
@@ -11,4 +12,11 @@
 
 .portfolio-img-btn {
   padding: 10px;
+}
+
+.custom_gritter {
+  background-color: green;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid white;
 }

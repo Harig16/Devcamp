@@ -33,13 +33,11 @@
       <!--p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p-->
       
-      <%= render 'shared/application_nav' %>
-      
+      <%= render 'shared/application_nav' %> 
       <%= yield %>
-      
-      <%= source_helper  "application" %>
-
       <%= render 'shared/application_footer' %>
+      <%= render "shared/alerts" %>
+      <%= source_helper  "application" %>
     </div> 
   </body>
 </html>
