@@ -10,4 +10,12 @@ class Blog < ApplicationRecord
   def self.special_blogs
     all
   end
+
+  def self.published
+    where(status: "published")
+  end
+
+  def self.recent
+    order("updated_at DESC")
+  end
 end

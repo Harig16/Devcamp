@@ -5,14 +5,22 @@ class BlogsController < ApplicationController
   # GET /blogs or /blogs.json
   def index
     #@blogs = Blog.special_blogs
-    @blogs = Blog.paginate(page: params[:page], per_page: 5)
+    if logged_in?(:site_admin)
+      @blogs = Blog.recent.paginate(page: params[:page], per_page: 5)
     #debugger
+    else
+      @blogs = Blog.published.recent.paginate(page: params[:page], per_page: 5)
+    end
     @page_title = "Blogs"
   end
 
   # GET /blogs/1 or /blogs/1.json
   def show
-    @page_title = @blog.title
+    unless logged_in?(GuestUser)
+      redirect_to blogs_path, notice: "Please login"
+    else
+      @page_title = @blog.title
+    end
   end
 
   # GET /blogs/new
@@ -27,7 +35,7 @@ class BlogsController < ApplicationController
   # POST /blogs or /blogs.json
   def create
     @blog = Blog.new(blog_params)
-
+    @blog.topic_id = Topic.first.id
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: "Blog was successfully created." }
