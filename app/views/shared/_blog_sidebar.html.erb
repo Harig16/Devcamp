@@ -6,6 +6,15 @@
     </div>
     
     <div class="p-4">
+      <h4 class="fst-italic">Topic</h4>
+      <ol class="list-unstyled">
+        <% @side_bar_topics.each do |topic| %>
+          <p><%= link_to topic.title, topic_path(topic) %></p>
+        <% end %>
+      </ol>
+    </div>
+
+    <div class="p-4">
       <h4 class="fst-italic">Elsewhere</h4>
       <ol class="list-unstyled source-style">
         <li><a href="#"><%= fa_icon "github" %></a></li>

@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[ show edit update destroy toggle_status]
+  before_action :set_sidebar_topics, except: [:create, :update, :destroy, :toggle_status]
   layout 'blog'
   access all: [:show, :index], user: {except: [:destroy, :new, :edit, :create, :update, :toggle_status]}, site_admin: :all
   # GET /blogs or /blogs.json
@@ -77,5 +78,9 @@ class BlogsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def blog_params
       params.require(:blog).permit(:title, :body, :topic_id)
+    end
+
+    def set_sidebar_topics
+      @side_bar_topics = Topic.with_blogs
     end
 end
