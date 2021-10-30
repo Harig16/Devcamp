@@ -16,7 +16,6 @@
     <%= form.label "Topic" %>
     <%= form.collection_select(:topic_id, Topic.all, :id, :title,
                               {
-                                selected: blog.topic.id,
                                 prompt: "Select Topic"
                               },
                                 class: "form-control")

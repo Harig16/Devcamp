@@ -4,5 +4,6 @@
 <div class="nav-scroller py-1 mb-2">
   <nav class="nav d-flex justify-content-between">
     <%= link_to 'Create New Blog', new_blog_path if logged_in?(:site_admin) %>
+    <%= link_to 'Topics', topic_index_path %>
   </nav>
 </div>
