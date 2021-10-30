@@ -64,6 +64,10 @@ gem 'dotenv-rails', '~> 2.7', '>= 2.7.6'
 gem 'cocoon', '~> 1.2', '>= 1.2.15'
 # Allow you to easily add glow notification
 gem "gritter", "1.2.0"
+##A fast, safe and extensible Markdown to (X)HTML parser
+gem 'redcarpet', '~> 3.5', '>= 3.5.1'
+##Fast and easy syntax highlighting for selected languages
+gem 'coderay', '~> 1.1', '>= 1.1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
