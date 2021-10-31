@@ -119,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .topic-nav {
+  color: rgb(31, 27, 27);
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -133,5 +134,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog-page{
-  margin-top: 20px;
+  margin-top: 30px;
+}
+
+.topic-style{
+  color: rgb(10, 95, 77);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center; 
+  padding: 10px;
 }

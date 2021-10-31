@@ -1,4 +1,6 @@
-<h1><%= @topic.title %></h1>
+<div class="topic-style">
+  <h1><%= @topic.title %></h1>
+</div>
 
 <nav class="pagination justify-content-center">
   <%= will_paginate @blogs, class: "page-link" %>

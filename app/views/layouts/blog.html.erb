@@ -32,11 +32,8 @@
     <!-- start of the nav -->
     <%= render 'shared/blog_nav' %>
     <!-- end of the nav -->
-    <main class="container">
+    <main class="container blog-page">
       <div class="row g-5">
-        <!--section class="border-bottom">
-          <%= render 'shared/blog_header' %>
-        </section-->
         <div class="col-md-8">   
           <%= yield %>
         </div>
@@ -44,9 +41,7 @@
         
         <%= render 'shared/blog_footer' %>
         <%= alerts %>
-        <%#= render 'shared/nav', location: "bottom" %>    
-        <%= source_helper "blog" %>
-        
+        <%#= render 'shared/nav', location: "bottom" %>          
       </div>
     </main>
   </body>

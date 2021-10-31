@@ -12,10 +12,10 @@ module ApplicationHelper
     login_helper_link.html_safe
   end
 
-  def source_helper(layout_name)
+  def source_helper(style)
     if session[:source]
-      greeting = "Thanks for visiting me from #{session[:source]} and you are in #{layout_name} page"
-      content_tag(:p, greeting , class: "source-greeting")
+      greeting = "Thanks for visiting me from #{session[:source]}, please free to #{ link_to "Contact", contact_path }".html_safe
+      content_tag(:div, greeting , class: style)
     end
   end
 
