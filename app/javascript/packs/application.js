@@ -9,7 +9,7 @@ require("@nathanvda/cocoon")
 require("@rails/activestorage").start()
 require("channels")
 require("gritter/js/jquery.gritter.js")
-require('bootstrap').start();
+require('bootstrap')
 import '../stylesheets/application'
 
 document.addEventListener("turoblinks:load", () => {
