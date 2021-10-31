@@ -9,8 +9,13 @@
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <%= nav_helper "nav-link nav-item", "li" %>
         <li><%= link_to 'Topics', topic_index_path, class: 'nav-link' %></li>
-        <%= login_helper "nav-link nav-item", "li" %>
       </ul>
     </div>
+    <div class="login-helper">
+      <nav class="nav d-flex justify-content-between">
+        <%= link_to 'Create New Blog', new_blog_path, class: 'btn btn-outline-success my-2 my-sm-0' if logged_in?(:site_admin) %>
+        <%= login_helper "nav-link", "div" %>
+      </nav>
+    </div>    
   </div>
 </nav>
