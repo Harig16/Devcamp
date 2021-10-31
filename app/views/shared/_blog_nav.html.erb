@@ -1,6 +1,16 @@
-<div class="nav-scroller py-1 mb-2">
-  <nav class="nav d-flex justify-content-around">
-    <%= nav_helper "link_secondary", "div" %>
-    <%= login_helper "link-secondary", "div" %>
-  </nav>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light navbar-light topic-nav" style="background-color: #e3f2fd;">
+  <!-- Navbar content -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <%= link_to "DevCamp", root_path, class: "navbar-brand" %>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <%= nav_helper "nav-link nav-item", "li" %>
+        <li><%= link_to 'Topics', topic_index_path, class: 'nav-link' %></li>
+        <%= login_helper "nav-link nav-item", "li" %>
+      </ul>
+    </div>
+  </div>
+</nav>
