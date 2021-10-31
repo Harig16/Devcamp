@@ -1,12 +1,13 @@
+<nav class="breadcrumb">
+  <%= link_to "Home", root_path, class: "breadcrumb-item"%>
+  <%= link_to @blog.topic.title, topic_path(@blog.topic), class: "breadcrumb-item" %>
+  <%= link_to @blog.title, @blog, class: "breadcrumb-item active" %>
+</nav>
+
 <h2 class="blog-post-title"><%= @blog.title %></h2>
 <p class="blog-post-meta">Published <%= distance_of_time_in_words @blog.created_at, Time.now %> ago. <strong>Status</strong>: <%= link_to @blog.status, toggle_status_blog_path(@blog) %></p>
 
-<% if logged_in?(:site_admin) %>
-  <p>
-    <%= link_to 'Edit', edit_blog_path(@blog)  %> /
-    <%= link_to 'Delete Post', blog_path(@blog), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
-  </p>
-<% end %>
+<%= render partial: 'admin_action', locals: {blog: @blog} %>
 
 <p><%= markdown @blog.body %></p>
 
