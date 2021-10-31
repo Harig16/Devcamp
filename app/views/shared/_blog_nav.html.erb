@@ -1,21 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark topic-nav" style="background-color: #e3f2fd;">
   <!-- Navbar content -->
   <%= link_to "DevCamp", root_path, class: "navbar-brand" %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+  <div class="collapse navbar-collapse" id="navbarToggler">
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav">
-        <%= nav_helper "nav-link nav-item", "li" %>
+        <%= nav_helper "nav-link", "li" %>
         <li><%= link_to 'Topics', topic_index_path, class: 'nav-link' %></li>
       </ul>
     </div>
     <div class="login-helper">
       <nav class="nav d-flex justify-content-between">
         <%= link_to 'Create New Blog', new_blog_path, class: 'btn btn-outline-success my-2 my-sm-0' if logged_in?(:site_admin) %>
-        <%= login_helper "nav-link", "div" %>
+        <%= login_helper "nav-link", "li" %>
       </nav>
     </div>    
-  </div>
+  <div>
 </nav>
